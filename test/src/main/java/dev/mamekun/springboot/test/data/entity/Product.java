@@ -1,17 +1,20 @@
-package dev.mamekun.springboot.jpa.data.entity;
+package dev.mamekun.springboot.test.data.entity;
 
 import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+// 예제 7.2
 @Entity
-@Table(name = "product")
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
+@ToString(exclude = "name")
+@Table(name = "product")
 public class Product {
 
     @Id
@@ -28,5 +31,7 @@ public class Product {
     private Integer stock;
 
     private LocalDateTime createdAt;
+
     private LocalDateTime updatedAt;
+
 }

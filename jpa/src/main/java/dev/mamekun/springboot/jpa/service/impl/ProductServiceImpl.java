@@ -6,11 +6,11 @@ import dev.mamekun.springboot.jpa.data.dto.ProductResponseDto;
 import dev.mamekun.springboot.jpa.data.entity.Product;
 import dev.mamekun.springboot.jpa.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
-@Component
+@Service
 public class ProductServiceImpl implements ProductService {
 
     private final ProductDAO productDAO;
